@@ -5,14 +5,17 @@ import os
 load_dotenv()
 
 config = {
-    "apiKey": os.getenv("FIREBASE_API_KEY"),
-    "authDomain": os.getenv("FIREBASE_AUTH_DOMAIN"),
-    "databaseURL": os.getenv("FIREBASE_DATABASE_URL"),
-    "projectId": os.getenv("FIREBASE_PROJECT_ID"),
-    "storageBucket": os.getenv("FIREBASE_STORAGE_BUCKET"),
-    "messagingSenderId": os.getenv("FIREBASE_MESSAGING_SENDER_ID"),
-    "appId": os.getenv("FIREBASE_APP_ID"),
+    "apiKey": "AIzaSyDnEfO5U4LlCt83BCGfrqpRcDNjTY6ybpE",
+    "authDomain": "studcredential.firebaseapp.com",
+    "databaseURL": "https://studcredential-default-rtdb.firebaseio.com",
+    "projectId": "studcredential",
+    "storageBucket": "studcredential.firebasestorage.app",  # This is the correct Firebase storage domainpy
+    "messagingSenderId": "344356259156",
+    "appId": "1:344356259156:web:bb1a927e8442446a1434c1"
 }
+
+
+
 
 firebase = pyrebase.initialize_app(config)
 auth = firebase.auth()
